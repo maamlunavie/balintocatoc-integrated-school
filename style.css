@@ -1,0 +1,675 @@
+/* ===============================
+   COLORS
+================================ */
+
+:root {
+    --green: #173c36;
+    --gold: #d7a94c;
+    --cream: #f5f1e7;
+    --ink: #252c2a;
+}
+
+
+/* ===============================
+   GENERAL DESIGN
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* ===============================
+   NAVIGATION BAR
+================================ */
+
+nav {
+    min-height: 76px;
+    padding: 0 7%;
+    background-color: var(--green);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* SCHOOL LOGO AND SCHOOL NAME */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+
+/* SCHOOL LOGO SIZE */
+
+.logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+
+/* SCHOOL NAME */
+
+.logo span {
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION LINKS */
+
+nav div {
+    display: flex;
+}
+
+nav div a {
+    color: white;
+    padding: 27px 16px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav div a:hover,
+nav div a.active {
+    color: var(--gold);
+    box-shadow: inset 0 -3px var(--gold);
+}
+
+
+/* ===============================
+   HOME PAGE – MAIN BANNER
+================================ */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 27, 24, 0.91),
+            rgba(6, 27, 24, 0.40)
+        ),
+        url("schoolfront.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero > div {
+    max-width: 720px;
+}
+
+.hero > div > p:first-child,
+.page-head p,
+.label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 8px 0;
+
+    font-family: Georgia, serif;
+    font-size: 73px;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: 20px;
+}
+
+
+/* ===============================
+   BUTTONS AND LINKS
+================================ */
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 13px 22px;
+
+    background-color: var(--gold);
+    color: var(--green);
+
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.button:hover {
+    filter: brightness(0.90);
+}
+
+.button.light {
+    background-color: white;
+}
+
+.text-link {
+    color: var(--green);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: var(--gold);
+}
+
+
+/* ===============================
+   HOME PAGE – INTRODUCTION
+================================ */
+
+.intro {
+    max-width: 1100px;
+    margin: auto;
+    padding: 95px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro h2,
+.collections h2,
+.reflection h2,
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.intro-photo {
+    height: 430px;
+
+    background-image: url("images/student-camera.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 15px 15px var(--gold);
+}
+
+
+/* ===============================
+   HOME PAGE – PHOTO COLLECTIONS
+================================ */
+
+.collections {
+    padding: 80px 7%;
+
+    background-color: var(--green);
+    color: white;
+
+    text-align: center;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: 35px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.cards a {
+    overflow: hidden;
+
+    background-color: white;
+    color: var(--ink);
+
+    text-align: left;
+    text-decoration: none;
+
+    transition: transform 0.20s;
+}
+
+.cards a:hover {
+    transform: translateY(-5px);
+}
+
+.cards h3 {
+    padding: 0 18px;
+}
+
+.photo {
+    height: 240px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.building {
+    background-image: url("C:/2026-27 Class/web example/school-photo-portfolio/32dfd6d6-91f9-4881-835c-130e446d5870.jpg");
+}
+
+.nature {
+    background-image: url("C:/2026-27 Class/web example/school-photo-portfolio/58b5d372-3fc7-4c6b-8a01-f3f908547914.jpg");
+}
+
+.activity {
+    background-image: url("C:/2026-27 Class/web example/school-photo-portfolio/jasdandie.jpg");
+}
+
+
+/* ===============================
+   HOME PAGE – SKILLS
+================================ */
+
+.skills {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skills article {
+    padding: 28px;
+
+    background-color: white;
+    border-top: 4px solid var(--gold);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.skills b {
+    color: var(--gold);
+}
+
+
+/* ===============================
+   HOME PAGE – ENDING
+================================ */
+
+.ending {
+    padding: 80px 20px;
+
+    background-color: var(--gold);
+    color: var(--green);
+
+    text-align: center;
+}
+
+.ending h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-style: italic;
+}
+
+
+/* ===============================
+   HEADER FOR OTHER PAGES
+================================ */
+
+.page-head {
+    padding: 85px 20px;
+
+    background:
+        linear-gradient(
+            rgba(6, 27, 24, 0.87),
+            rgba(6, 27, 24, 0.87)
+        ),
+        url("images/page-header.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+}
+
+.page-head h1 {
+    margin: 5px;
+
+    font-family: Georgia, serif;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+
+/* ===============================
+   ABOUT PAGE
+================================ */
+
+.about {
+    max-width: 1050px;
+    margin: 70px auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* KAPAG DIV ANG STUDENT PICTURE */
+
+.student-photo {
+    width: 100%;
+    height: 500px;
+
+    background-image: url("images/student-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* KAPAG IMG TAG ANG STUDENT PICTURE */
+
+.student-image {
+    width: 100%;
+}
+
+.student-image img {
+    width: 100%;
+    height: 500px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.about table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.about th,
+.about td {
+    padding: 10px;
+
+    border-bottom: 1px solid #cccccc;
+    text-align: left;
+}
+
+.about th {
+    color: var(--green);
+}
+
+.wide {
+    grid-column: 1 / -1;
+
+    padding: 35px;
+
+    background-color: var(--green);
+    color: white;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.skill-list p {
+    margin: 0;
+    padding: 12px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ===============================
+   GALLERY PAGE
+================================ */
+
+.gallery {
+    max-width: 1150px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.notice {
+    padding: 13px;
+
+    background-color: #fff1c9;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grid figure {
+    overflow: hidden;
+    margin: 0;
+
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.grid img {
+    width: 100%;
+    height: 260px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.grid figcaption {
+    padding: 15px;
+}
+
+
+/* ===============================
+   REFLECTION PAGE
+================================ */
+
+.reflection {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 45px;
+
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.reflection p {
+    margin-bottom: 22px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    padding: 32px;
+
+    background-color: #102824;
+    color: white;
+
+    text-align: center;
+}
+
+footer h3 {
+    margin: 0;
+    color: var(--gold);
+}
+
+footer p,
+footer small {
+    color: #b8c6c2;
+}
+
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    nav {
+        padding: 10px 4%;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    nav div a {
+        padding: 24px 9px;
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+
+    nav {
+        display: block;
+        padding: 14px 5px 0;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 8px;
+
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo span {
+        white-space: normal;
+    }
+
+    nav div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav div a {
+        padding: 13px 8px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 570px;
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .intro,
+    .cards,
+    .skills,
+    .about,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        padding: 65px 25px;
+    }
+
+    .intro-photo {
+        height: 330px;
+    }
+
+    .wide {
+        grid-column: auto;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .page-head h1 {
+        font-size: 42px;
+    }
+
+    .reflection {
+        margin: 35px 18px;
+        padding: 28px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr;
+    }
+}
